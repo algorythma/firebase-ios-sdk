@@ -1,4 +1,5 @@
 # Unreleased
+- [changed] Improved performance of queries with large result sets.
 
 # v1.10.0
 - [feature] Firestore previously required that every document read in a
