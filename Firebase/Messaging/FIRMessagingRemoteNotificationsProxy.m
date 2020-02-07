@@ -342,8 +342,8 @@ static NSString *kReceiveDataMessageSelectorString = @"messaging:didReceiveMessa
 
 - (IMP)originalImplementationForSelector:(SEL)selector {
   NSString *selectorString = NSStringFromSelector(selector);
-    if [selectorString containsString: @"userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:"] {
-        selectorString = @"userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:"
+    if([selectorString containsString: @"userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:"]) {
+        selectorString = @"userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:";
     }
   NSValue *implementation_value = self.originalAppDelegateImps[selectorString];
   if (!implementation_value) {
